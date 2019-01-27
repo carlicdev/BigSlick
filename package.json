@@ -1,0 +1,21 @@
+{
+  "name": "big-slick",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client &&  run start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"run server\" \"run client\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "mongoose": "^5.4.7",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
