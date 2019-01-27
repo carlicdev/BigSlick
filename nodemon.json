@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PW": "_56lajefa"
+        "MONGO_ATLAS_PW": "_56lajefa",
+        "node": true
     }
 }
