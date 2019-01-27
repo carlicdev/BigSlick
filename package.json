@@ -1,6 +1,10 @@
 {
   "name": "big-slick",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.4.0"
+  },
+  "private": true,
   "scripts": {
     "client": "cd client &&  run start",
     "server": "nodemon server.js",
