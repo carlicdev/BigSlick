@@ -22,7 +22,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(helmet());
 
 // Routes 
-app.use('/api/contact', contactRouter)
+app.use('/api/contact', contactRouter);
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+    const path = require("path");
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+  };
 
 // Static files
 //app.use(express.static(path.join(__dirname, 'public')));
