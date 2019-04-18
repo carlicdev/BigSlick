@@ -6,17 +6,17 @@
   },
   "private": true,
   "scripts": {
-    "client": "cd client &&  run start",
+    "start": "node server.js",
+    "client": "npm run start --prefix client",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"run server\" \"run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "helmet": "^3.15.0",
-    "mongoose": "^5.4.7",
-    "morgan": "^1.9.1",
+    "jquery": "^3.3.1",
+    "nodemailer": "^5.1.1",
     "nodemon": "^1.18.9",
+    "popper.js": "^1.14.7",
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
